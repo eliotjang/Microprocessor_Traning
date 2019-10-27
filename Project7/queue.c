@@ -1,11 +1,8 @@
-#include <stdio.h>
-#include <avr/io.h>
-#include <avr/interrupt.h>
-#include <util/delay.h>
-#include "uart.h"
+// queue.c
+#include "queue.h"
 
-#define QI_SIZE 256
-#define QO_SIZE 256
+#define QI_SIZE 128
+#define QO_SIZE 128
 
 static char qi[QI_SIZE], qo[QO_SIZE];
 static int fi, ri, fo, ro;
