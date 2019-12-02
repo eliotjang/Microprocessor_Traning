@@ -15,7 +15,7 @@ COMMON = -mmcu=$(MCU)
 
 ## Compile options common for all C compilation units.
 CFLAGS = $(COMMON)
-CFLAGS += -Wall -gdwarf-2 -std=gnu99   -DF_CPU=7372800UL -Os -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums
+CFLAGS += -Wall -gdwarf-2 -std=gnu99       -DF_CPU=7372800UL -Os -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums
 CFLAGS += -MD -MP -MT $(*F).o -MF dep/$(@F).d 
 
 ## Assembly specific flags
@@ -26,6 +26,7 @@ ASMFLAGS += -x assembler-with-cpp -Wa,-gdwarf2
 ## Linker flags
 LDFLAGS = $(COMMON)
 LDFLAGS +=  -Wl,-Map=Pjt_flash.map
+LDFLAGS += -Wl,-section-start=.text=0x30000
 
 
 ## Intel Hex file production flags
@@ -37,7 +38,7 @@ HEX_EEPROM_FLAGS += --change-section-lma .eeprom=0 --no-change-warnings
 
 
 ## Objects that must be built in order to link
-OBJECTS = spm.o main.o spm2.o app.o led.o list.o queue.o timer.o timer2.o uart.o mcu1.o 
+OBJECTS = main.o mcu1.o mcu2.o spm.o spm2.o uart.o 
 
 ## Objects explicitly added by the user
 LINKONLYOBJECTS = 
@@ -46,37 +47,22 @@ LINKONLYOBJECTS =
 all: $(TARGET) Pjt_flash.hex Pjt_flash.eep Pjt_flash.lss size
 
 ## Compile
-spm.o: ../spm.c
+main.o: ../main.c
 	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
 
-main.o: ../main.c
+mcu1.o: ../mcu1.c
+	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
+
+mcu2.o: ../mcu2.c
+	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
+
+spm.o: ../spm.c
 	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
 
 spm2.o: ../spm2.c
 	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
 
-app.o: ../app.c
-	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
-
-led.o: ../led.c
-	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
-
-list.o: ../list.c
-	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
-
-queue.o: ../queue.c
-	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
-
-timer.o: ../timer.c
-	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
-
-timer2.o: ../timer2.c
-	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
-
 uart.o: ../uart.c
-	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
-
-mcu1.o: ../mcu1.c
 	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
 
 ##Link

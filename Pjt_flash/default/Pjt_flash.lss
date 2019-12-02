@@ -1,0 +1,832 @@
+
+Pjt_flash.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800200  0003043c  000004b0  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000043c  00030000  00030000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .stab         000006e4  00000000  00000000  000004b0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  3 .stabstr      00000085  00000000  00000000  00000b94  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_aranges 00000128  00000000  00000000  00000c20  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000a91  00000000  00000000  00000d48  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000004aa  00000000  00000000  000017d9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000006d7  00000000  00000000  00001c83  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000002ac  00000000  00000000  0000235c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000002e1  00000000  00000000  00002608  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000608  00000000  00000000  000028e9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000018  00000000  00000000  00002ef1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00030000 <__vectors>:
+   30000:	0d 94 72 80 	jmp	0x300e4	; 0x300e4 <__ctors_end>
+   30004:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30008:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   3000c:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30010:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30014:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30018:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   3001c:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30020:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30024:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30028:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   3002c:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30030:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30034:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30038:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   3003c:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30040:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30044:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30048:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   3004c:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30050:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30054:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30058:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   3005c:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30060:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30064:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30068:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   3006c:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30070:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30074:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30078:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   3007c:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30080:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30084:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30088:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   3008c:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30090:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30094:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   30098:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   3009c:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   300a0:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   300a4:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   300a8:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   300ac:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   300b0:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   300b4:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   300b8:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   300bc:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   300c0:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   300c4:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   300c8:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   300cc:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   300d0:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   300d4:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   300d8:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   300dc:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+   300e0:	0d 94 94 80 	jmp	0x30128	; 0x30128 <__bad_interrupt>
+
+000300e4 <__ctors_end>:
+   300e4:	11 24       	eor	r1, r1
+   300e6:	1f be       	out	0x3f, r1	; 63
+   300e8:	cf ef       	ldi	r28, 0xFF	; 255
+   300ea:	d1 e2       	ldi	r29, 0x21	; 33
+   300ec:	de bf       	out	0x3e, r29	; 62
+   300ee:	cd bf       	out	0x3d, r28	; 61
+   300f0:	01 e0       	ldi	r16, 0x01	; 1
+   300f2:	0c bf       	out	0x3c, r16	; 60
+
+000300f4 <__do_copy_data>:
+   300f4:	12 e0       	ldi	r17, 0x02	; 2
+   300f6:	a0 e0       	ldi	r26, 0x00	; 0
+   300f8:	b2 e0       	ldi	r27, 0x02	; 2
+   300fa:	ec e3       	ldi	r30, 0x3C	; 60
+   300fc:	f4 e0       	ldi	r31, 0x04	; 4
+   300fe:	03 e0       	ldi	r16, 0x03	; 3
+   30100:	0b bf       	out	0x3b, r16	; 59
+   30102:	02 c0       	rjmp	.+4      	; 0x30108 <__do_copy_data+0x14>
+   30104:	07 90       	elpm	r0, Z+
+   30106:	0d 92       	st	X+, r0
+   30108:	a0 30       	cpi	r26, 0x00	; 0
+   3010a:	b1 07       	cpc	r27, r17
+   3010c:	d9 f7       	brne	.-10     	; 0x30104 <__do_copy_data+0x10>
+   3010e:	1b be       	out	0x3b, r1	; 59
+
+00030110 <__do_clear_bss>:
+   30110:	12 e0       	ldi	r17, 0x02	; 2
+   30112:	a0 e0       	ldi	r26, 0x00	; 0
+   30114:	b2 e0       	ldi	r27, 0x02	; 2
+   30116:	01 c0       	rjmp	.+2      	; 0x3011a <.do_clear_bss_start>
+
+00030118 <.do_clear_bss_loop>:
+   30118:	1d 92       	st	X+, r1
+
+0003011a <.do_clear_bss_start>:
+   3011a:	a0 30       	cpi	r26, 0x00	; 0
+   3011c:	b1 07       	cpc	r27, r17
+   3011e:	e1 f7       	brne	.-8      	; 0x30118 <.do_clear_bss_loop>
+   30120:	0f 94 f4 81 	call	0x303e8	; 0x303e8 <main>
+   30124:	0d 94 1c 82 	jmp	0x30438	; 0x30438 <_exit>
+
+00030128 <__bad_interrupt>:
+   30128:	0d 94 00 80 	jmp	0x30000	; 0x30000 <__vectors>
+
+0003012c <exec_app_code>:
+   return(0);
+}
+
+void exec_app_code(void)
+{
+   RAMPZ = 0;
+   3012c:	1b be       	out	0x3b, r1	; 59
+   sbi(MCUCR, (1<<IVCE));
+   3012e:	85 b7       	in	r24, 0x35	; 53
+   30130:	82 60       	ori	r24, 0x02	; 2
+   30132:	85 bf       	out	0x35, r24	; 53
+   cbi(MCUCR, (1<<IVSEL));
+   30134:	85 b7       	in	r24, 0x35	; 53
+   30136:	8b 7f       	andi	r24, 0xFB	; 251
+   30138:	85 bf       	out	0x35, r24	; 53
+   asm("jmp 0x0000");
+   3013a:	0c 94 00 00 	jmp	0	; 0x0 <__heap_end>
+}
+   3013e:	08 95       	ret
+
+00030140 <send_device_ID>:
+#include "uart.h"
+
+
+void send_device_ID(void)
+{
+   uart_TX_byte(MCU_TYPE);
+   30140:	88 e8       	ldi	r24, 0x88	; 136
+   30142:	0f 94 ed 81 	call	0x303da	; 0x303da <uart_TX_byte>
+   uart_TX_byte(MCU_FLASHSZ);
+   30146:	81 e7       	ldi	r24, 0x71	; 113
+   30148:	0f 94 ed 81 	call	0x303da	; 0x303da <uart_TX_byte>
+   uart_TX_byte(MCU_BOOTSZ);
+   3014c:	85 e6       	ldi	r24, 0x65	; 101
+   3014e:	0f 94 ed 81 	call	0x303da	; 0x303da <uart_TX_byte>
+   uart_TX_byte(MCU_PAGESZ);
+   30152:	84 e5       	ldi	r24, 0x54	; 84
+   30154:	0f 94 ed 81 	call	0x303da	; 0x303da <uart_TX_byte>
+   uart_TX_byte(MCU_EEPROMSZ);
+   30158:	84 e3       	ldi	r24, 0x34	; 52
+   3015a:	0f 94 ed 81 	call	0x303da	; 0x303da <uart_TX_byte>
+}
+   3015e:	08 95       	ret
+
+00030160 <get_flash_page_number>:
+uint16_t get_flash_page_number(void)
+{
+   30160:	cf 93       	push	r28
+   uint8_t pg_num_hi, pg_num_lo;
+
+   pg_num_hi = uart_RX_byte();
+   30162:	0f 94 e6 81 	call	0x303cc	; 0x303cc <uart_RX_byte>
+   30166:	c8 2f       	mov	r28, r24
+   pg_num_lo = uart_RX_byte();
+   30168:	0f 94 e6 81 	call	0x303cc	; 0x303cc <uart_RX_byte>
+
+   return((uint16_t)((pg_num_hi <<8) + + pg_num_lo));
+   3016c:	3c 2f       	mov	r19, r28
+   3016e:	20 e0       	ldi	r18, 0x00	; 0
+   30170:	a9 01       	movw	r20, r18
+   30172:	48 0f       	add	r20, r24
+   30174:	51 1d       	adc	r21, r1
+   30176:	ca 01       	movw	r24, r20
+}
+   30178:	cf 91       	pop	r28
+   3017a:	08 95       	ret
+
+0003017c <get_flash_page>:
+
+uint8_t get_flash_page(uint8_t pg_buf[],uint16_t pg_bytesz)
+{
+   3017c:	df 92       	push	r13
+   3017e:	ef 92       	push	r14
+   30180:	ff 92       	push	r15
+   30182:	0f 93       	push	r16
+   30184:	1f 93       	push	r17
+   30186:	cf 93       	push	r28
+   30188:	df 93       	push	r29
+   3018a:	7b 01       	movw	r14, r22
+   uint16_t i;
+   uint8_t checksum =0 , received_checksum;
+   for ( i=0; i< pg_bytesz; i++){
+   3018c:	8c 01       	movw	r16, r24
+}
+
+uint8_t get_flash_page(uint8_t pg_buf[],uint16_t pg_bytesz)
+{
+   uint16_t i;
+   uint8_t checksum =0 , received_checksum;
+   3018e:	dd 24       	eor	r13, r13
+   for ( i=0; i< pg_bytesz; i++){
+   30190:	c0 e0       	ldi	r28, 0x00	; 0
+   30192:	d0 e0       	ldi	r29, 0x00	; 0
+   30194:	07 c0       	rjmp	.+14     	; 0x301a4 <get_flash_page+0x28>
+      pg_buf[i] = uart_RX_byte();
+   30196:	0f 94 e6 81 	call	0x303cc	; 0x303cc <uart_RX_byte>
+   3019a:	f8 01       	movw	r30, r16
+   3019c:	81 93       	st	Z+, r24
+   3019e:	8f 01       	movw	r16, r30
+      checksum += pg_buf[i];
+   301a0:	d8 0e       	add	r13, r24
+
+uint8_t get_flash_page(uint8_t pg_buf[],uint16_t pg_bytesz)
+{
+   uint16_t i;
+   uint8_t checksum =0 , received_checksum;
+   for ( i=0; i< pg_bytesz; i++){
+   301a2:	21 96       	adiw	r28, 0x01	; 1
+   301a4:	ce 15       	cp	r28, r14
+   301a6:	df 05       	cpc	r29, r15
+   301a8:	b1 f7       	brne	.-20     	; 0x30196 <get_flash_page+0x1a>
+      pg_buf[i] = uart_RX_byte();
+      checksum += pg_buf[i];
+      }
+
+      received_checksum = uart_RX_byte();
+   301aa:	0f 94 e6 81 	call	0x303cc	; 0x303cc <uart_RX_byte>
+      if (checksum == received_checksum)
+         return 1;
+   301ae:	91 e0       	ldi	r25, 0x01	; 1
+   301b0:	d8 12       	cpse	r13, r24
+   301b2:	90 e0       	ldi	r25, 0x00	; 0
+      else
+         return 0;
+}
+   301b4:	89 2f       	mov	r24, r25
+   301b6:	df 91       	pop	r29
+   301b8:	cf 91       	pop	r28
+   301ba:	1f 91       	pop	r17
+   301bc:	0f 91       	pop	r16
+   301be:	ff 90       	pop	r15
+   301c0:	ef 90       	pop	r14
+   301c2:	df 90       	pop	r13
+   301c4:	08 95       	ret
+
+000301c6 <load_flash>:
+#include"spm.h"
+#include"mcu.h"
+
+
+void load_flash(void)
+{
+   301c6:	0f 93       	push	r16
+   301c8:	1f 93       	push	r17
+   301ca:	cf 93       	push	r28
+   301cc:	df 93       	push	r29
+   301ce:	cd b7       	in	r28, 0x3d	; 61
+   301d0:	de b7       	in	r29, 0x3e	; 62
+   301d2:	c0 50       	subi	r28, 0x00	; 0
+   301d4:	d1 40       	sbci	r29, 0x01	; 1
+   301d6:	0f b6       	in	r0, 0x3f	; 63
+   301d8:	f8 94       	cli
+   301da:	de bf       	out	0x3e, r29	; 62
+   301dc:	0f be       	out	0x3f, r0	; 63
+   301de:	cd bf       	out	0x3d, r28	; 61
+   uint8_t page_buf[PageByteSize];
+   uint16_t page_num;
+
+   uart_TX_byte(MCU_FLASH_GET);
+   301e0:	81 e2       	ldi	r24, 0x21	; 33
+   301e2:	0f 94 ed 81 	call	0x303da	; 0x303da <uart_TX_byte>
+
+   while(1){
+      page_num = get_flash_page_number();
+   301e6:	0f 94 b0 80 	call	0x30160	; 0x30160 <get_flash_page_number>
+   301ea:	8c 01       	movw	r16, r24
+      if(page_num == 0xffff)
+   301ec:	8f ef       	ldi	r24, 0xFF	; 255
+   301ee:	0f 3f       	cpi	r16, 0xFF	; 255
+   301f0:	18 07       	cpc	r17, r24
+   301f2:	11 f1       	breq	.+68     	; 0x30238 <load_flash+0x72>
+         return;
+      if(get_flash_page(page_buf, sizeof(page_buf))){
+   301f4:	ce 01       	movw	r24, r28
+   301f6:	01 96       	adiw	r24, 0x01	; 1
+   301f8:	60 e0       	ldi	r22, 0x00	; 0
+   301fa:	71 e0       	ldi	r23, 0x01	; 1
+   301fc:	0f 94 be 80 	call	0x3017c	; 0x3017c <get_flash_page>
+   30200:	88 23       	and	r24, r24
+   30202:	c1 f0       	breq	.+48     	; 0x30234 <load_flash+0x6e>
+         flash_page_buffer_write(page_buf, sizeof(page_buf));
+   30204:	ce 01       	movw	r24, r28
+   30206:	01 96       	adiw	r24, 0x01	; 1
+   30208:	60 e0       	ldi	r22, 0x00	; 0
+   3020a:	71 e0       	ldi	r23, 0x01	; 1
+   3020c:	0f 94 64 81 	call	0x302c8	; 0x302c8 <flash_page_buffer_write>
+         flash_page_erase(page_num);
+   30210:	c8 01       	movw	r24, r16
+   30212:	0f 94 44 81 	call	0x30288	; 0x30288 <flash_page_erase>
+         flash_page_write(page_num);
+   30216:	c8 01       	movw	r24, r16
+   30218:	0f 94 81 81 	call	0x30302	; 0x30302 <flash_page_write>
+         flash_RWW_clearSB();
+   3021c:	0f 94 89 81 	call	0x30312	; 0x30312 <flash_RWW_clearSB>
+         if(flash_page_verify(page_num, page_buf, sizeof(page_buf)))
+   30220:	c8 01       	movw	r24, r16
+   30222:	be 01       	movw	r22, r28
+   30224:	6f 5f       	subi	r22, 0xFF	; 255
+   30226:	7f 4f       	sbci	r23, 0xFF	; 255
+   30228:	40 e0       	ldi	r20, 0x00	; 0
+   3022a:	51 e0       	ldi	r21, 0x01	; 1
+   3022c:	0f 94 a5 81 	call	0x3034a	; 0x3034a <flash_page_verify>
+   30230:	88 23       	and	r24, r24
+   30232:	b1 f6       	brne	.-84     	; 0x301e0 <load_flash+0x1a>
+            uart_TX_byte(MCU_FLASH_PAGE_OK);
+         else
+            uart_TX_byte(MCU_FLASH_VRIFY_ERR);
+      }
+      else{
+         uart_TX_byte(MCU_FLASH_CKSUM_ERR);
+   30234:	80 e4       	ldi	r24, 0x40	; 64
+   30236:	d5 cf       	rjmp	.-86     	; 0x301e2 <load_flash+0x1c>
+      }
+   }
+}
+   30238:	c0 50       	subi	r28, 0x00	; 0
+   3023a:	df 4f       	sbci	r29, 0xFF	; 255
+   3023c:	0f b6       	in	r0, 0x3f	; 63
+   3023e:	f8 94       	cli
+   30240:	de bf       	out	0x3e, r29	; 62
+   30242:	0f be       	out	0x3f, r0	; 63
+   30244:	cd bf       	out	0x3d, r28	; 61
+   30246:	df 91       	pop	r29
+   30248:	cf 91       	pop	r28
+   3024a:	1f 91       	pop	r17
+   3024c:	0f 91       	pop	r16
+   3024e:	08 95       	ret
+
+00030250 <wait_for_SPM>:
+	asm("SPM");
+}
+
+void wait_for_SPM()
+{
+	while(SPMCSR & (1 << SPMEN))
+   30250:	07 b6       	in	r0, 0x37	; 55
+   30252:	00 fc       	sbrc	r0, 0
+   30254:	fd cf       	rjmp	.-6      	; 0x30250 <wait_for_SPM>
+		;
+}
+   30256:	08 95       	ret
+
+00030258 <do_SPM>:
+	pag_addr = (pg_num & 0xff) << 8;
+	do_SPM(pag_addr,(1 <<PGERS) | (1 << SPMEN));
+}
+
+void do_SPM(uint16_t pg_addr,uint8_t spm_cmd)
+{
+   30258:	0f 93       	push	r16
+   3025a:	1f 93       	push	r17
+   3025c:	cf 93       	push	r28
+   3025e:	df 93       	push	r29
+   30260:	0f 92       	push	r0
+   30262:	cd b7       	in	r28, 0x3d	; 61
+   30264:	de b7       	in	r29, 0x3e	; 62
+   30266:	8c 01       	movw	r16, r24
+	wait_for_SPM();
+   30268:	69 83       	std	Y+1, r22	; 0x01
+   3026a:	0f 94 28 81 	call	0x30250	; 0x30250 <wait_for_SPM>
+
+	ZPNTR=pg_addr;
+   3026e:	10 93 1f 00 	sts	0x001F, r17
+   30272:	00 93 1e 00 	sts	0x001E, r16
+	SPMCSR = spm_cmd;
+   30276:	69 81       	ldd	r22, Y+1	; 0x01
+   30278:	67 bf       	out	0x37, r22	; 55
+	asm("SPM");
+   3027a:	e8 95       	spm
+}
+   3027c:	0f 90       	pop	r0
+   3027e:	df 91       	pop	r29
+   30280:	cf 91       	pop	r28
+   30282:	1f 91       	pop	r17
+   30284:	0f 91       	pop	r16
+   30286:	08 95       	ret
+
+00030288 <flash_page_erase>:
+
+
+#define INLPM
+#include"spm.h"
+void flash_page_erase(uint16_t pg_num)
+{
+   30288:	28 2f       	mov	r18, r24
+	uint16_t pag_addr;
+
+	RAMPZ = pg_num >> 8;
+   3028a:	9b bf       	out	0x3b, r25	; 59
+	pag_addr = (pg_num & 0xff) << 8;
+	do_SPM(pag_addr,(1 <<PGERS) | (1 << SPMEN));
+   3028c:	80 e0       	ldi	r24, 0x00	; 0
+   3028e:	92 2f       	mov	r25, r18
+   30290:	63 e0       	ldi	r22, 0x03	; 3
+   30292:	0f 94 2c 81 	call	0x30258	; 0x30258 <do_SPM>
+}
+   30296:	08 95       	ret
+
+00030298 <flash_page_buffer_word_write>:
+								wd_off<pg_bytesz;wd_off += 2 , wbp++)
+				flash_page_buffer_word_write(wd_off,*wbp);
+}
+
+void flash_page_buffer_word_write(uint16_t wd_off,uint16_t wd)
+{
+   30298:	1f 93       	push	r17
+   3029a:	cf 93       	push	r28
+   3029c:	df 93       	push	r29
+	uint8_t r1 = R01;
+   3029e:	c1 e0       	ldi	r28, 0x01	; 1
+   302a0:	d0 e0       	ldi	r29, 0x00	; 0
+   302a2:	18 81       	ld	r17, Y
+	PGBUF = wd;
+   302a4:	70 93 01 00 	sts	0x0001, r23
+   302a8:	60 93 00 00 	sts	0x0000, r22
+	ZPNTR = wd_off;
+   302ac:	90 93 1f 00 	sts	0x001F, r25
+   302b0:	80 93 1e 00 	sts	0x001E, r24
+
+	wait_for_SPM();
+   302b4:	0f 94 28 81 	call	0x30250	; 0x30250 <wait_for_SPM>
+
+	SPMCSR = (1<<SPMEN);
+   302b8:	81 e0       	ldi	r24, 0x01	; 1
+   302ba:	87 bf       	out	0x37, r24	; 55
+	asm("SPM");
+   302bc:	e8 95       	spm
+
+	R01 = r1;
+   302be:	18 83       	st	Y, r17
+}
+   302c0:	df 91       	pop	r29
+   302c2:	cf 91       	pop	r28
+   302c4:	1f 91       	pop	r17
+   302c6:	08 95       	ret
+
+000302c8 <flash_page_buffer_write>:
+	while(SPMCSR & (1 << SPMEN))
+		;
+}
+
+void flash_page_buffer_write(uint8_t pg_buf[],uint16_t pg_bytesz)
+{
+   302c8:	ef 92       	push	r14
+   302ca:	ff 92       	push	r15
+   302cc:	0f 93       	push	r16
+   302ce:	1f 93       	push	r17
+   302d0:	cf 93       	push	r28
+   302d2:	df 93       	push	r29
+   302d4:	7b 01       	movw	r14, r22
+	uint16_t wd_off, *wbp;
+	for(wd_off =0, wbp = (uint16_t *)pg_buf;
+   302d6:	8c 01       	movw	r16, r24
+   302d8:	c0 e0       	ldi	r28, 0x00	; 0
+   302da:	d0 e0       	ldi	r29, 0x00	; 0
+   302dc:	08 c0       	rjmp	.+16     	; 0x302ee <flash_page_buffer_write+0x26>
+								wd_off<pg_bytesz;wd_off += 2 , wbp++)
+				flash_page_buffer_word_write(wd_off,*wbp);
+   302de:	f8 01       	movw	r30, r16
+   302e0:	61 91       	ld	r22, Z+
+   302e2:	71 91       	ld	r23, Z+
+   302e4:	8f 01       	movw	r16, r30
+   302e6:	ce 01       	movw	r24, r28
+   302e8:	0f 94 4c 81 	call	0x30298	; 0x30298 <flash_page_buffer_word_write>
+
+void flash_page_buffer_write(uint8_t pg_buf[],uint16_t pg_bytesz)
+{
+	uint16_t wd_off, *wbp;
+	for(wd_off =0, wbp = (uint16_t *)pg_buf;
+								wd_off<pg_bytesz;wd_off += 2 , wbp++)
+   302ec:	22 96       	adiw	r28, 0x02	; 2
+}
+
+void flash_page_buffer_write(uint8_t pg_buf[],uint16_t pg_bytesz)
+{
+	uint16_t wd_off, *wbp;
+	for(wd_off =0, wbp = (uint16_t *)pg_buf;
+   302ee:	ce 15       	cp	r28, r14
+   302f0:	df 05       	cpc	r29, r15
+   302f2:	a8 f3       	brcs	.-22     	; 0x302de <flash_page_buffer_write+0x16>
+								wd_off<pg_bytesz;wd_off += 2 , wbp++)
+				flash_page_buffer_word_write(wd_off,*wbp);
+}
+   302f4:	df 91       	pop	r29
+   302f6:	cf 91       	pop	r28
+   302f8:	1f 91       	pop	r17
+   302fa:	0f 91       	pop	r16
+   302fc:	ff 90       	pop	r15
+   302fe:	ef 90       	pop	r14
+   30300:	08 95       	ret
+
+00030302 <flash_page_write>:
+	asm("SPM");
+
+	R01 = r1;
+}
+void flash_page_write(uint16_t pg_num)
+{
+   30302:	28 2f       	mov	r18, r24
+	uint16_t pg_addr;
+
+	RAMPZ = pg_num >> 8;
+   30304:	9b bf       	out	0x3b, r25	; 59
+	pg_addr = (pg_num & 0xff) <<8;
+
+	do_SPM(pg_addr,(1<<PGWRT) | (1<<SPMEN));
+   30306:	80 e0       	ldi	r24, 0x00	; 0
+   30308:	92 2f       	mov	r25, r18
+   3030a:	65 e0       	ldi	r22, 0x05	; 5
+   3030c:	0f 94 2c 81 	call	0x30258	; 0x30258 <do_SPM>
+}
+   30310:	08 95       	ret
+
+00030312 <flash_RWW_clearSB>:
+void flash_RWW_clearSB(){
+	do_SPM(0,(1<<RWWSRE) | (1<<SPMEN));
+   30312:	80 e0       	ldi	r24, 0x00	; 0
+   30314:	90 e0       	ldi	r25, 0x00	; 0
+   30316:	61 e1       	ldi	r22, 0x11	; 17
+   30318:	0f 94 2c 81 	call	0x30258	; 0x30258 <do_SPM>
+}
+   3031c:	08 95       	ret
+
+0003031e <do_LPM_byte>:
+
+
+void do_LPM_byte(uint16_t pb_addr){
+	ZPNTR=pb_addr;
+   3031e:	90 93 1f 00 	sts	0x001F, r25
+   30322:	80 93 1e 00 	sts	0x001E, r24
+	asm("ELPM R24,Z");
+   30326:	86 91       	elpm	r24, Z
+}
+   30328:	08 95       	ret
+
+0003032a <do_LPM_word>:
+void do_LPM_word(uint16_t pw_addr){
+	ZPNTR=pw_addr;
+   3032a:	90 93 1f 00 	sts	0x001F, r25
+   3032e:	80 93 1e 00 	sts	0x001E, r24
+	asm("ELPM R24,Z+");
+   30332:	87 91       	elpm	r24, Z+
+	asm("ELPM R25,Z");
+   30334:	96 91       	elpm	r25, Z
+}
+   30336:	08 95       	ret
+
+00030338 <flash_byte_read>:
+	do_SPM(0,(1<<RWWSRE) | (1<<SPMEN));
+}
+
+
+void do_LPM_byte(uint16_t pb_addr){
+	ZPNTR=pb_addr;
+   30338:	90 93 1f 00 	sts	0x001F, r25
+   3033c:	80 93 1e 00 	sts	0x001E, r24
+	asm("ELPM R24,Z");
+   30340:	86 91       	elpm	r24, Z
+}
+void flash_byte_read(uint16_t pb_addr){
+	do_LPM_byte(pb_addr);
+	
+	
+}
+   30342:	08 95       	ret
+
+00030344 <flash_word_read>:
+
+void flash_word_read(uint16_t pw_addr){
+	do_LPM_word(pw_addr);		
+   30344:	0f 94 95 81 	call	0x3032a	; 0x3032a <do_LPM_word>
+}
+   30348:	08 95       	ret
+
+0003034a <flash_page_verify>:
+#include <avr/io.h>
+#include "spm.h"
+uint8_t flash_page_verify(uint16_t pg_num , uint8_t pg_buf[] , uint16_t pg_bytesz)
+{
+   3034a:	cf 92       	push	r12
+   3034c:	df 92       	push	r13
+   3034e:	ef 92       	push	r14
+   30350:	ff 92       	push	r15
+   30352:	0f 93       	push	r16
+   30354:	1f 93       	push	r17
+   30356:	cf 93       	push	r28
+   30358:	df 93       	push	r29
+   3035a:	6a 01       	movw	r12, r20
+	uint16_t pg_addr,wd_off,wd,*wbp;
+
+	RAMPZ =pg_num >> 8;
+   3035c:	9b bf       	out	0x3b, r25	; 59
+	pg_addr =(pg_num & 0xff ) <<8;
+   3035e:	18 2f       	mov	r17, r24
+   30360:	00 e0       	ldi	r16, 0x00	; 0
+   30362:	7b 01       	movw	r14, r22
+
+	for(wd_off = 0 , wbp = (uint16_t *)pg_buf; wd_off<pg_bytesz; wd_off += 2 , wbp++){
+   30364:	c0 e0       	ldi	r28, 0x00	; 0
+   30366:	d0 e0       	ldi	r29, 0x00	; 0
+   30368:	0d c0       	rjmp	.+26     	; 0x30384 <flash_page_verify+0x3a>
+		wd = flash_word_read(pg_addr + wd_off);
+   3036a:	ce 01       	movw	r24, r28
+   3036c:	80 0f       	add	r24, r16
+   3036e:	91 1f       	adc	r25, r17
+   30370:	0f 94 a2 81 	call	0x30344	; 0x30344 <flash_word_read>
+		if(wd != *wbp)
+   30374:	f7 01       	movw	r30, r14
+   30376:	21 91       	ld	r18, Z+
+   30378:	31 91       	ld	r19, Z+
+   3037a:	7f 01       	movw	r14, r30
+   3037c:	82 17       	cp	r24, r18
+   3037e:	93 07       	cpc	r25, r19
+   30380:	31 f4       	brne	.+12     	; 0x3038e <flash_page_verify+0x44>
+	uint16_t pg_addr,wd_off,wd,*wbp;
+
+	RAMPZ =pg_num >> 8;
+	pg_addr =(pg_num & 0xff ) <<8;
+
+	for(wd_off = 0 , wbp = (uint16_t *)pg_buf; wd_off<pg_bytesz; wd_off += 2 , wbp++){
+   30382:	22 96       	adiw	r28, 0x02	; 2
+   30384:	cc 15       	cp	r28, r12
+   30386:	dd 05       	cpc	r29, r13
+   30388:	80 f3       	brcs	.-32     	; 0x3036a <flash_page_verify+0x20>
+		wd = flash_word_read(pg_addr + wd_off);
+		if(wd != *wbp)
+			return 0;
+	}
+	return 1;
+   3038a:	81 e0       	ldi	r24, 0x01	; 1
+   3038c:	01 c0       	rjmp	.+2      	; 0x30390 <flash_page_verify+0x46>
+	pg_addr =(pg_num & 0xff ) <<8;
+
+	for(wd_off = 0 , wbp = (uint16_t *)pg_buf; wd_off<pg_bytesz; wd_off += 2 , wbp++){
+		wd = flash_word_read(pg_addr + wd_off);
+		if(wd != *wbp)
+			return 0;
+   3038e:	80 e0       	ldi	r24, 0x00	; 0
+	}
+	return 1;
+}
+   30390:	df 91       	pop	r29
+   30392:	cf 91       	pop	r28
+   30394:	1f 91       	pop	r17
+   30396:	0f 91       	pop	r16
+   30398:	ff 90       	pop	r15
+   3039a:	ef 90       	pop	r14
+   3039c:	df 90       	pop	r13
+   3039e:	cf 90       	pop	r12
+   303a0:	08 95       	ret
+
+000303a2 <uart_init>:
+#include "uart.h"
+void uart_init()
+{
+	uint16_t baudrate;
+	baudrate = F_CPU/16/9600 -1 ;
+	UBRR0H = baudrate >> 8;
+   303a2:	10 92 c5 00 	sts	0x00C5, r1
+	UBRR0L = baudrate;
+   303a6:	8f e2       	ldi	r24, 0x2F	; 47
+   303a8:	80 93 c4 00 	sts	0x00C4, r24
+	UCSR0B |= (1 << TXEN0) | (1 << RXEN0);
+   303ac:	e1 ec       	ldi	r30, 0xC1	; 193
+   303ae:	f0 e0       	ldi	r31, 0x00	; 0
+   303b0:	80 81       	ld	r24, Z
+   303b2:	88 61       	ori	r24, 0x18	; 24
+   303b4:	80 83       	st	Z, r24
+}
+   303b6:	08 95       	ret
+
+000303b8 <uart_RX_empty>:
+
+uint8_t uart_RX_empty(void)
+{
+	return(!(UCSR0A & (1<<RXC0)));
+   303b8:	80 91 c0 00 	lds	r24, 0x00C0
+   303bc:	80 95       	com	r24
+}
+   303be:	88 1f       	adc	r24, r24
+   303c0:	88 27       	eor	r24, r24
+   303c2:	88 1f       	adc	r24, r24
+   303c4:	08 95       	ret
+
+000303c6 <uart_RX_clear>:
+uint8_t uart_RX_clear(void)
+{
+	return(UDR0);
+   303c6:	80 91 c6 00 	lds	r24, 0x00C6
+
+}
+   303ca:	08 95       	ret
+
+000303cc <uart_RX_byte>:
+uint8_t uart_RX_byte(void)
+{
+	while(!(UCSR0A & (1 << RXC0)));
+   303cc:	80 91 c0 00 	lds	r24, 0x00C0
+   303d0:	87 ff       	sbrs	r24, 7
+   303d2:	fc cf       	rjmp	.-8      	; 0x303cc <uart_RX_byte>
+	return(UDR0);
+   303d4:	80 91 c6 00 	lds	r24, 0x00C6
+}
+   303d8:	08 95       	ret
+
+000303da <uart_TX_byte>:
+void uart_TX_byte(uint8_t by)
+{
+	while(!(UCSR0A & (1 << UDRE0)));
+   303da:	90 91 c0 00 	lds	r25, 0x00C0
+   303de:	95 ff       	sbrs	r25, 5
+   303e0:	fc cf       	rjmp	.-8      	; 0x303da <uart_TX_byte>
+	UDR0 = by;
+   303e2:	80 93 c6 00 	sts	0x00C6, r24
+}
+   303e6:	08 95       	ret
+
+000303e8 <main>:
+#include"mcu.h"
+
+void exec_app_code(void);
+
+int main(void)
+{
+   303e8:	cf 93       	push	r28
+   uint8_t i;
+
+   uart_init();
+   303ea:	0f 94 d1 81 	call	0x303a2	; 0x303a2 <uart_init>
+   uart_TX_byte(MCU_HELLO);
+   303ee:	8e e3       	ldi	r24, 0x3E	; 62
+   303f0:	0f 94 ed 81 	call	0x303da	; 0x303da <uart_TX_byte>
+   303f4:	ca e0       	ldi	r28, 0x0A	; 10
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+   303f6:	8f ef       	ldi	r24, 0xFF	; 255
+   303f8:	9f e3       	ldi	r25, 0x3F	; 63
+   303fa:	a2 e0       	ldi	r26, 0x02	; 2
+   303fc:	81 50       	subi	r24, 0x01	; 1
+   303fe:	90 40       	sbci	r25, 0x00	; 0
+   30400:	a0 40       	sbci	r26, 0x00	; 0
+   30402:	e1 f7       	brne	.-8      	; 0x303fc <main+0x14>
+   30404:	00 c0       	rjmp	.+0      	; 0x30406 <main+0x1e>
+   30406:	00 00       	nop
+   
+   for(i=0; i<10;i++){
+      _delay_ms(100);
+      if(!uart_RX_empty())
+   30408:	0f 94 dc 81 	call	0x303b8	; 0x303b8 <uart_RX_empty>
+   3040c:	88 23       	and	r24, r24
+   3040e:	11 f0       	breq	.+4      	; 0x30414 <main+0x2c>
+   30410:	c1 50       	subi	r28, 0x01	; 1
+   uint8_t i;
+
+   uart_init();
+   uart_TX_byte(MCU_HELLO);
+   
+   for(i=0; i<10;i++){
+   30412:	89 f7       	brne	.-30     	; 0x303f6 <main+0xe>
+      _delay_ms(100);
+      if(!uart_RX_empty())
+         break;
+   }
+   if(!uart_RX_empty()){
+   30414:	0f 94 dc 81 	call	0x303b8	; 0x303b8 <uart_RX_empty>
+   30418:	88 23       	and	r24, r24
+   3041a:	41 f4       	brne	.+16     	; 0x3042c <main+0x44>
+      if(uart_RX_byte() == MEGA_FINE){
+   3041c:	0f 94 e6 81 	call	0x303cc	; 0x303cc <uart_RX_byte>
+   30420:	8c 33       	cpi	r24, 0x3C	; 60
+   30422:	21 f4       	brne	.+8      	; 0x3042c <main+0x44>
+         send_device_ID();
+   30424:	0f 94 a0 80 	call	0x30140	; 0x30140 <send_device_ID>
+         load_flash();
+   30428:	0f 94 e3 80 	call	0x301c6	; 0x301c6 <load_flash>
+      }
+   }
+   exec_app_code();
+   3042c:	0f 94 96 80 	call	0x3012c	; 0x3012c <exec_app_code>
+   return(0);
+}
+   30430:	80 e0       	ldi	r24, 0x00	; 0
+   30432:	90 e0       	ldi	r25, 0x00	; 0
+   30434:	cf 91       	pop	r28
+   30436:	08 95       	ret
+
+00030438 <_exit>:
+   30438:	f8 94       	cli
+
+0003043a <__stop_program>:
+   3043a:	ff cf       	rjmp	.-2      	; 0x3043a <__stop_program>

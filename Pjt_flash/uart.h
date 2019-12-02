@@ -1,15 +1,6 @@
+#include <avr/io.h>
+
 void uart_init();
-//int uart_putchar(char ch, FILE *stream);
-//int uart_putstr(char *sp);
-//int uart_putchar_1(char ch, FILE *stream);
-//int uart_putchar_2(char ch, FILE *stream);
-int uart_putstart(char str[]);
-void uart_echo(char ch);
-//int uart_getchar(FILE *stream);
-//ISR(USATR0_TX_vect);
-char buf[64];
-int volatile bufi, txend;
-char uart_busy;
 uint8_t uart_RX_empty(void);
 uint8_t uart_RX_clear(void);
 uint8_t uart_RX_byte(void);
